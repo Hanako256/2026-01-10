@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://06k4nwurjm1v"]
+
+[ext_resource type="Texture2D" uid="uid://cff24xphv2yvq" path="res://sprites/dialogue_frame.png" id="1_oi3j2"]
+[ext_resource type="Texture2D" uid="uid://c4gs1c2nhdrkq" path="res://sprites/dialogue_space.png" id="2_758ep"]
+[ext_resource type="Texture2D" uid="uid://ciw3v8ai2sa74" path="res://sprites/p03.png" id="3_758ep"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoxo3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_758ep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="dialogue_frame" type="Sprite2D"]
+texture = ExtResource("1_oi3j2")
+
+[node name="dialogue_space" type="Sprite2D" parent="."]
+position = Vector2(0, -0.7143161)
+scale = Vector2(1, 0.99301255)
+texture = ExtResource("2_758ep")
+
+[node name="Dialogue" type="RichTextLabel" parent="."]
+offset_left = -257.0
+offset_top = -75.0
+offset_right = 431.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 35
+text = "Yep, I'm P03. OK?"
+
+[node name="character" type="AnimatedSprite2D" parent="."]
+position = Vector2(-406, -31)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_hoxo3")

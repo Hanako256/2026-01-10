@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dor34uii4kf6d"]
+
+[ext_resource type="Texture2D" uid="uid://kpmrqxi02f3t" path="res://sprites/note bar.png" id="1_273me"]
+[ext_resource type="Script" uid="uid://cvqpmwxtsbg7d" path="res://scenes/note_bar.gd" id="1_yfww1"]
+[ext_resource type="Texture2D" uid="uid://bgji77nvsap8d" path="res://sprites/note bar_hit.png" id="2_yof15"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dlwm1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_273me")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yof15")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yof15"]
+
+[node name="Note" type="Area2D" groups=["note"]]
+script = ExtResource("1_yfww1")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dlwm1")
+
+[node name="Collisions" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yof15")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1iv1sb501bl8"]
+
+[ext_resource type="Texture2D" uid="uid://dgj62ewix1kkv" path="res://sprites/slider bar.png" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://bglg0k5h56uga" path="res://scenes/game.gd" id="1_ryrav"]
+[ext_resource type="PackedScene" uid="uid://5adgviubrktk" path="res://scenes/player.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://dor34uii4kf6d" path="res://scenes/note_bar.tscn" id="3_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://06k4nwurjm1v" path="res://scenes/dialogue.tscn" id="4_7jktm"]
+[ext_resource type="PackedScene" uid="uid://jhq30abrv0cy" path="res://scenes/audio_player.tscn" id="5_ryrav"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_ryrav")
+
+[node name="Slider" type="Sprite2D" parent="."]
+position = Vector2(45, 284)
+texture = ExtResource("1_80nbo")
+
+[node name="Player" parent="." instance=ExtResource("2_feb5d")]
+position = Vector2(44, 143)
+
+[node name="Note Bar" parent="." instance=ExtResource("3_fc0e3")]
+
+[node name="Player_Bounds_Up" type="Marker2D" parent="."]
+position = Vector2(44, 36)
+
+[node name="Player_Bounds_Down" type="Marker2D" parent="."]
+position = Vector2(44, 532)
+
+[node name="dialogue_frame" parent="." instance=ExtResource("4_7jktm")]
+position = Vector2(500, 572)
+scale = Vector2(0.8, 0.8)
+
+[node name="AudioPlayer" parent="." instance=ExtResource("5_ryrav")]
+autoplay = true
