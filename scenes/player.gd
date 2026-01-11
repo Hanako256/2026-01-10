@@ -5,6 +5,8 @@ var slow_speed = reg_speed * 0.4
 var acceleration = 1
 @export var acc_mult = 1.007
 var velocity = Vector2.ZERO
+var move_up_allowed:bool = true
+var move_down_allowed:bool = true
 
 var perfect:bool = false
 var good:bool = false
@@ -13,13 +15,21 @@ var current_note = null
 var score = 0
 
 func _process(delta: float) -> void:
-	
-	if (Input.is_action_pressed("move_up")):
-		velocity.y = -speed * acceleration
-		acceleration *= acc_mult
+	if Input.is_action_just_pressed("hit_note"):
+		if  current_note != null:
+			if perfect:
+				score += 5
+			elif good:
+				score += 3
+			elif okay:
+				score += 1
+		$NoteBar.destroy()
+	if (Input.is_action_pressed("move_up") and move_up_allowed):
+			velocity.y = -speed * acceleration
+			acceleration *= acc_mult
 	if (Input.is_action_pressed("move_down")):
-		velocity.y = speed * acceleration
-		acceleration *= acc_mult
+			velocity.y = speed * acceleration
+			acceleration *= acc_mult
 		
 	if (Input.is_action_pressed("slow")):
 		speed = slow_speed
@@ -30,7 +40,14 @@ func _process(delta: float) -> void:
 		velocity.y = 0
 	if (Input.is_action_just_pressed("move_down") or Input.is_action_just_pressed("move_up")):
 		acceleration = 1
-
+	
+	if (!move_down_allowed):
+		if (velocity.y > 0):
+			velocity.y = 0
+	
+	if (!move_up_allowed):
+		if (velocity.y < 0):
+			velocity.y = 0
 	position += velocity * delta
 
 #OkayArea functions

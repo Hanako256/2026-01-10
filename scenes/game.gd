@@ -6,3 +6,14 @@ func _process(delta: float) -> void:
 	var count = time as int
 	$dialogue_frame/Dialogue.clear()
 	$dialogue_frame/Dialogue.add_text(str(count))
+	if $Player.position.y < $Player_Bounds_Up.position.y:
+		$Player.move_up_allowed = false
+	if $Player.position.y > $Player_Bounds_Down.position.y:
+		$Player.move_down_allowed = false
+		
+	if $Player.position.y > $Player_Bounds_Up.position.y:
+		$Player.move_up_allowed = true
+	if $Player.position.y < $Player_Bounds_Down.position.y:
+		$Player.move_down_allowed = true
+	
+	

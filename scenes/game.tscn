@@ -20,10 +20,10 @@ position = Vector2(44, 143)
 [node name="Note Bar" parent="." instance=ExtResource("3_fc0e3")]
 
 [node name="Player_Bounds_Up" type="Marker2D" parent="."]
-position = Vector2(44, 36)
+position = Vector2(45, 72)
 
 [node name="Player_Bounds_Down" type="Marker2D" parent="."]
-position = Vector2(44, 532)
+position = Vector2(44, 494)
 
 [node name="dialogue_frame" parent="." instance=ExtResource("4_7jktm")]
 position = Vector2(500, 572)

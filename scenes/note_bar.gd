@@ -5,3 +5,6 @@ var velocity = Vector2.ZERO
 func _process(delta: float) -> void:
 	velocity.x = -speed
 	position += velocity * delta
+
+func destroy():
+	queue_free()
