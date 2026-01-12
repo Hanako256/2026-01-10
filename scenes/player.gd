@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 				score += 3
 			elif okay:
 				score += 1
-		$NoteBar.destroy()
 	if (Input.is_action_pressed("move_up") and move_up_allowed):
 			velocity.y = -speed * acceleration
 			acceleration *= acc_mult
@@ -50,6 +49,11 @@ func _process(delta: float) -> void:
 			velocity.y = 0
 	position += velocity * delta
 
+func reset():
+	current_note = null
+	perfect = false
+	good = false
+	okay = false
 #OkayArea functions
 func _on_OkayArea_entered(area: Area2D) -> void:
 	if area.is_in_group("note"):

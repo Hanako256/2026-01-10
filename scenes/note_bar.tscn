@@ -33,3 +33,8 @@ sprite_frames = SubResource("SpriteFrames_dlwm1")
 
 [node name="Collisions" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yof15")
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
