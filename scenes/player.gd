@@ -16,6 +16,8 @@ var score = 0
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("hit_note"):
+		play("hit")
+		$HitAnimationTimer.start()
 		if  current_note != null:
 			if perfect:
 				score += 5
@@ -82,3 +84,7 @@ func _on_PerfectArea_entered(area: Area2D) -> void:
 func _on_PerfectArea_exited(area: Area2D) -> void:
 	if area.is_in_group("note"):
 		perfect = false
+
+
+func _on_hit_animation_timeout() -> void:
+	play("default")

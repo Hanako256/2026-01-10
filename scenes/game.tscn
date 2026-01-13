@@ -14,10 +14,12 @@ script = ExtResource("1_ryrav")
 position = Vector2(45, 284)
 texture = ExtResource("1_80nbo")
 
+[node name="Note Bar" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(595, 225)
+speed = 100
+
 [node name="Player" parent="." instance=ExtResource("2_feb5d")]
 position = Vector2(44, 143)
-
-[node name="Note Bar" parent="." instance=ExtResource("3_fc0e3")]
 
 [node name="Player_Bounds_Up" type="Marker2D" parent="."]
 position = Vector2(45, 72)

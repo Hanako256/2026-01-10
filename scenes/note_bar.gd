@@ -10,9 +10,8 @@ const DIST_TO_TARGET = TARGET_X - SPAWN_X
 func _physics_process(delta: float) -> void:
 	if !hit:
 		position.x -= speed * delta
-		if position.x < 0:
+		if position.x < -50:
 			queue_free()
-			print("WORKS!")
 
 func initialize(y):
 	position = Vector2(SPAWN_X, y)

@@ -52,9 +52,13 @@ shape = SubResource("RectangleShape2D_tuyoq")
 [node name="PerfectCollisions" type="CollisionShape2D" parent="PerfectArea"]
 shape = SubResource("RectangleShape2D_fjrip")
 
+[node name="HitAnimationTimer" type="Timer" parent="."]
+wait_time = 0.15
+
 [connection signal="area_entered" from="OkayArea" to="." method="_on_OkayArea_entered"]
 [connection signal="area_exited" from="OkayArea" to="." method="_on_OkayArea_exited"]
 [connection signal="area_entered" from="GoodArea" to="." method="_on_GoodArea_entered"]
 [connection signal="area_exited" from="GoodArea" to="." method="_on_GoodArea_exited"]
 [connection signal="area_entered" from="PerfectArea" to="." method="_on_PerfectArea_entered"]
 [connection signal="area_exited" from="PerfectArea" to="." method="_on_PerfectArea_exited"]
+[connection signal="timeout" from="HitAnimationTimer" to="." method="_on_hit_animation_timeout"]
