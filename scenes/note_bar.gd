@@ -20,8 +20,8 @@ func initialize(y):
 func destroy():
 	hit = true
 	$DeathTimer.start()
+	$Animation.play("hit")
 
 
 func _on_death_timer_timeout():
-	print("works")
 	queue_free()

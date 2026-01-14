@@ -14,8 +14,8 @@ script = ExtResource("1_ryrav")
 position = Vector2(45, 284)
 texture = ExtResource("1_80nbo")
 
-[node name="Note Bar" parent="." instance=ExtResource("3_fc0e3")]
-position = Vector2(595, 225)
+[node name="NoteBar" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(259, 285)
 speed = 100
 
 [node name="Player" parent="." instance=ExtResource("2_feb5d")]
@@ -33,3 +33,27 @@ scale = Vector2(0.8, 0.8)
 
 [node name="AudioPlayer" parent="." instance=ExtResource("5_ryrav")]
 autoplay = true
+
+[node name="NoteBar2" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(350, 286)
+speed = 100
+
+[node name="NoteBar3" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(406, 236)
+speed = 100
+
+[node name="NoteBar4" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(460, 261)
+speed = 100
+
+[node name="NoteBar5" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(543, 288)
+speed = 100
+
+[node name="NoteBar6" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(588, 155)
+speed = 100
+
+[node name="NoteBar7" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(653, 200)
+speed = 100

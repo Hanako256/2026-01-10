@@ -25,7 +25,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yof15"]
 
-[node name="Note" type="Area2D" groups=["note"]]
+[node name="NoteBar" type="Area2D" groups=["note"]]
 script = ExtResource("1_yfww1")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
@@ -35,6 +35,6 @@ sprite_frames = SubResource("SpriteFrames_dlwm1")
 shape = SubResource("RectangleShape2D_yof15")
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.1
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
