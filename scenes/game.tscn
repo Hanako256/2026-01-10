@@ -1,14 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1iv1sb501bl8"]
+[gd_scene load_steps=8 format=3 uid="uid://d1iv1sb501bl8"]
 
 [ext_resource type="Texture2D" uid="uid://dgj62ewix1kkv" path="res://sprites/slider bar.png" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://bglg0k5h56uga" path="res://scenes/game.gd" id="1_ryrav"]
 [ext_resource type="PackedScene" uid="uid://5adgviubrktk" path="res://scenes/player.tscn" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://d2ivw7jx0p3gf" path="res://sprites/BG squished.png" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dor34uii4kf6d" path="res://scenes/note_bar.tscn" id="3_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://06k4nwurjm1v" path="res://scenes/dialogue.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://jhq30abrv0cy" path="res://scenes/audio_player.tscn" id="5_ryrav"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_ryrav")
+
+[node name="BgSquished" type="Sprite2D" parent="."]
+position = Vector2(576, 284)
+texture = ExtResource("2_u5sy4")
 
 [node name="Slider" type="Sprite2D" parent="."]
 position = Vector2(45, 284)
@@ -55,5 +60,5 @@ position = Vector2(588, 155)
 speed = 100
 
 [node name="NoteBar7" parent="." instance=ExtResource("3_fc0e3")]
-position = Vector2(653, 200)
+position = Vector2(650, 200)
 speed = 100
