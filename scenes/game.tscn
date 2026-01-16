@@ -32,15 +32,14 @@ position = Vector2(45, 72)
 [node name="Player_Bounds_Down" type="Marker2D" parent="."]
 position = Vector2(44, 494)
 
-[node name="dialogue_frame" parent="." instance=ExtResource("4_7jktm")]
-position = Vector2(500, 572)
-scale = Vector2(0.8, 0.8)
+[node name="dialogue" parent="." instance=ExtResource("4_7jktm")]
+position = Vector2(607, 553)
 
 [node name="AudioPlayer" parent="." instance=ExtResource("5_ryrav")]
 autoplay = true
 
 [node name="NoteBar2" parent="." instance=ExtResource("3_fc0e3")]
-position = Vector2(350, 286)
+position = Vector2(350, 284)
 speed = 100
 
 [node name="NoteBar3" parent="." instance=ExtResource("3_fc0e3")]

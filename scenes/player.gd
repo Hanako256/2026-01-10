@@ -14,17 +14,28 @@ var okay:bool = false
 var current_note = null
 var score = 0
 
+var add_perfect = 5
+var add_good = 3
+var add_okay = 1
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("hit_note"):
 		play("hit")
 		$HitAnimationTimer.start()
 		if  current_note != null:
 			if perfect:
-				score += 5
+				score += add_perfect
+				$GainPoints.text = "+ " + str(add_perfect)
+				$PointsTimer.start()
 			elif good:
-				score += 3
+				score += add_good
+				$GainPoints.text = "+ " + str(add_good)
+				$PointsTimer.start()
 			elif okay:
-				score += 1
+				score += add_okay
+				$GainPoints.text = "+ " + str(add_okay)
+				$PointsTimer.start()
+	
 	if (Input.is_action_pressed("move_up") and move_up_allowed):
 			velocity.y = -speed * acceleration
 			acceleration *= acc_mult
@@ -88,3 +99,7 @@ func _on_PerfectArea_exited(area: Area2D) -> void:
 
 func _on_hit_animation_timeout() -> void:
 	play("default")
+
+
+func _on_points_timeout() -> void:
+	$GainPoints.text = ""
