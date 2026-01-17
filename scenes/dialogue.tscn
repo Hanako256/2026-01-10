@@ -34,7 +34,6 @@ offset_top = -75.0
 offset_right = 431.0
 offset_bottom = 59.0
 theme_override_font_sizes/normal_font_size = 35
-text = "Yep, I'm P03. OK?"
 
 [node name="character" type="AnimatedSprite2D" parent="."]
 position = Vector2(-406, -31)
@@ -47,6 +46,7 @@ offset_top = -75.0
 offset_right = 431.0
 offset_bottom = 59.0
 theme_override_font_sizes/normal_font_size = 35
+text = "Yep, I'm P03."
 script = ExtResource("5_led2e")
-typing_speed = 4.0
+typing_speed = 10.0
 metadata/_custom_type_script = "uid://bigcfyacvshrd"

@@ -61,3 +61,19 @@ speed = 100
 [node name="NoteBar7" parent="." instance=ExtResource("3_fc0e3")]
 position = Vector2(650, 200)
 speed = 100
+
+[node name="NoteBar8" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(733, 280)
+speed = 100
+
+[node name="NoteBar9" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(790, 314)
+speed = 100
+
+[node name="NoteBar10" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(850, 285)
+speed = 100
+
+[node name="NoteBar11" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(900, 377)
+speed = 100
